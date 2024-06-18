@@ -9,6 +9,8 @@ import About from './Pages/about/About';
 import Skills from './Pages/skills/Skills';
 import Projects from './Pages/projects/Projects';
 import Contacts from './Pages/contacts/Contacts';
+import Navbar from './components/navbar/Navbar';
+import { CssBaseline } from '@mui/material';
 
 const App = () => {
 	const [theme, colorMode] = useMode();
@@ -18,7 +20,7 @@ const App = () => {
 			path: '/',
 			element: (
 				<>
-					<div>Hello</div>
+					<Navbar />
 					<Outlet />
 				</>
 			),
@@ -35,6 +37,7 @@ const App = () => {
 	return (
 		<ThemeContext.Provider value={colorMode}>
 			<ThemeProvider theme={theme}>
+				<CssBaseline />
 				<RouterProvider router={router} />
 			</ThemeProvider>
 		</ThemeContext.Provider>

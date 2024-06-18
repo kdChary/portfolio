@@ -27,7 +27,7 @@ black: {
 */
 
 export const tokens = (mode) =>
-	mode === 'dark'
+	mode === 'light'
 		? {
 				blue: {
 					100: '#d0d0ff',
@@ -167,7 +167,6 @@ const themeSettings = (mode) => {
 			h1: {
 				fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
 				fontSize: 40,
-				color: colors.blue[600]
 			},
 			h2: {
 				fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
